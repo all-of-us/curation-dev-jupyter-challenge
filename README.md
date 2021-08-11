@@ -20,7 +20,7 @@ It is expected that you are able to run [Docker](https://docs.docker.com/get-doc
 Additionally, it is expected that your chosen database will run as a container.  You must define either a 
 [Dockerfile](https://docs.docker.com/engine/reference/builder/) or a
 [Docker Compose](https://docs.docker.com/compose/compose-file/compose-file-v3/) file that, when run, launches and
-initializes said database with the output from step 1 of the challenge
+initializes said database with the output from step 1 of the challenge.
 
 ### 3. Jupyter
 You will be expected to provide a [Jupyter Notebook](https://jupyter.org/) file that uses the aforementioned database
