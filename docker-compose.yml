@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  download-csv:
+    build:
+      context: docker/github-repos
+      dockerfile: Dockerfile
+    environment:
+      LANGUAGE_OF_INTEREST: "python"
+    image: "curation-dev-python-challenge-download-csv"
+    volumes:
+      - "./repos-csv-output:/repos-csv-output"
