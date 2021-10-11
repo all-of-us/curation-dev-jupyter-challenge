@@ -31,7 +31,6 @@ $pwd=(get-location)
 
 $run_args=$cmd_args
 $run_args+=@(
-    'compose',
     'run',
     '-v',
     """${pwd}/repos-csv-output:/repos-csv-output""",
