@@ -9,8 +9,8 @@ SLEEP_SECONDS="${SLEEP_SECONDS:-5}"
 # base url for github api
 FETCH_BASE_URL="https://api.github.com/search/repositories?q=language:${LANGUAGE_OF_INTEREST}&sort=stargazers_count&per_page=100&page="
 
-# base output file, should be defined by an ENVVAR
-OUTPUT_FILE="${GITHUB_REPOS_CSV:-$(pwd)/repos-csv-output/${LANGUAGE_OF_INTEREST}-github-repos.csv}"
+# output file
+OUTPUT_FILE="/repos-csv-output/${LANGUAGE_OF_INTEREST}-github-repos.csv"
 
 # list of fields we're extracting from the returned json
 FIELDS_OF_INTEREST=(name full_name created_at updated_at pushed_at git_url ssh_url\
@@ -61,5 +61,7 @@ do
   page_json=$(fetch_repo_list_page i)
   write_rows "${OUTPUT_FILE}" "${page_json}"
   echo "Sleeping ${SLEEP_SECONDS} seconds..."
-  sleep "${SLEEP_SECONDS}"
+  if [[ "${i}" -lt 10 ]]; then
+    sleep "${SLEEP_SECONDS}"
+  fi
 done

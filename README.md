@@ -28,10 +28,12 @@ as its data source.  It does not have to be run from a container, but it certain
 
 ## The Challenge
 1. From the root of this challenge directory, execute:
-    ```shell
-    docker-compose build
-    docker-compose run download-csv
-    ```
+   ```shell
+   # on Linux and macOS
+   ./generate_csv.sh
+   # on Windodws
+   .\\generate_csv.ps1
+   ```
    * This creates a file named `python-github-repos.csv` within the `./repos-csv-output` directory.
 2. Store this data in the database engine either requested of you, or of your choice if left open.
 3. Create a Jupyter Notebook that connects to this database and provides visualizations of this data of your own 
@@ -40,7 +42,7 @@ choosing
 a given data model 
 4. Where applicable, the user must be able to alter the data used in a given visualization, either by number of items
 being displayed, data points being represented, or anything that you feel may make sense / be interesting!
-1. Create a `RESPONSE_README.md` file with the following:
+5. Create a `RESPONSE_README.md` file with the following:
    1. Explanation of database initialization process
    2. Explanation of how to run your database container and notebook
    3. Description of basic workflow of challenge response

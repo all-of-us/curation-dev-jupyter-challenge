@@ -8,5 +8,5 @@ services:
     environment:
       LANGUAGE_OF_INTEREST: "python"
     image: "curation-dev-python-challenge-download-csv"
-    volumes:
-      - "./repos-csv-output:/repos-csv-output"
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t
