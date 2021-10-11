@@ -32,7 +32,7 @@ as its data source.  It does not have to be run from a container, but it certain
    # on Linux and macOS
    ./generate_csv.sh
    # on Windodws
-   .\\generate_csv.ps1
+   .\generate_csv.ps1
    ```
    * This creates a file named `python-github-repos.csv` within the `./repos-csv-output` directory.
 2. Store this data in the database engine either requested of you, or of your choice if left open.
